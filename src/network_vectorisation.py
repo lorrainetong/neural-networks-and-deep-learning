@@ -91,7 +91,6 @@ class Network(object):
         gradient for the cost function C_x.  ``nabla_b`` and
         ``nabla_w`` are layer-by-layer lists of numpy arrays, similar
         to ``self.biases`` and ``self.weights``."""
-        # biases_dup = [np.tile(np.array(b), (1, len(mini_batch))) for b in self.biases]
         nabla_b = [np.zeros((len(b), len(mini_batch))) for b in self.biases]
         nabla_w = [np.zeros(w.shape) for w in self.weights]
         # feedforward
